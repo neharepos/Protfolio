@@ -31,7 +31,7 @@ const blogData = [
 </script>
 
 <template>
-  <div class="relative bg-[#0a0a0a] min-h-screen flex justify-center">
+  <div class="relative bg-[#0a0a0a] min-h-screen flex justify-center -mt-5" >
     
     
     <div
@@ -67,11 +67,7 @@ const blogData = [
         />
       </div>
 
-      <button class="mt-6 border px-4 mb-4 ml-6 border-white text-white rounded sm:px- cursor-pointer hover:underline">View all</button>
-
-      <!-- <h3 class="mt-6 text-blue-500 sm:px- cursor-pointer hover:underline">
-        View all →
-      </h3> -->
+      <button class="mt-6 border px-4 mb-4 ml-6 border-gray-600 text-white rounded sm:px- cursor-pointer hover:underline">View all</button>
 
     </div>
   </div>
