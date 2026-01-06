@@ -20,10 +20,10 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div class="bg-[#0a0a0a] px-19">
-  <div class="max-w-2xl mx-auto p-12 bg-zinc-00 border border-zinc-900 rounded-2xl backdrop-blur-sm shadow-xl">
-    <h2 class="text-3xl font-bold text-white mb-2">Get in touch</h2>
-    <p class="text-zinc-400 mb-8 font-light">Have a project in mind? Let's build something together.</p>
+  <div class="bg-[#0a0a0a] px-19 ">
+  <div class="max-w-2xl mx-auto p-12 bg-zinc-900 border  border-zinc-900  hover:bg-zinc-800 group-hover:w-full transition-all duration-500 rounded-2xl backdrop-blur-sm shadow-xl">
+    <h2 class="text-3xl font-bold text-white mb-2 font-poppins hover:text-emerald-500">Get in touch</h2>
+    <p class="text-zinc-400 mb-8 hover:text-emerald-500">Have a project in mind? Let's build something together.</p>
 
     <form @submit.prevent="handleSubmit" class="space-y-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
