@@ -4,4 +4,5 @@
     <BlocksWorks/>
     <BlocksProjects/>
     <ElementsForm/>
+    <ElementsFooter/>
 </template>
