@@ -2,17 +2,17 @@
 
 <template>
   <div class="bg-[#0a0a0a]">
-    <div className="text-gray-600 py-8">
-      <div className="container mx-auto px-6 flex flex-col items-center">
-        <ul className="flex flex-wrap justify-center space-x-6 mb-6">
-          <li><a href="#" className="hover:text-emerald-500">Home</a></li>
-          <li><a href="#" className="hover:text-emerald-500">Blog</a></li>
-          <li><a href="#" className="hover:text-emerald-500">Notes</a></li>
-          <li><a href="#" className="hover:text-emerald-500">Projects</a></li>
-          <li><a href="#" className="hover:text-emerald-500">Contact</a></li>
+    <div class="text-gray-600 py-8">
+      <div class="container mx-auto px-6 flex flex-col items-center">
+        <ul class="flex flex-wrap justify-center space-x-6 mb-6">
+          <li><a href="#" class="hover:text-emerald-500">Home</a></li>
+          <li><a href="#" class="hover:text-emerald-500">Blog</a></li>
+          <li><a href="#" class="hover:text-emerald-500">Notes</a></li>
+          <li><a href="#" class="hover:text-emerald-500">Projects</a></li>
+          <li><a href="#" class="hover:text-emerald-500">Contact</a></li>
         </ul>
 
-        <div className="flex gap-6 text-2xl mb-4">
+        <div class="gap-6 text-2xl mb-4 flex">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@
             </svg>
           </a>
         </div>
-        <p className="text-sm">
+        <p class="text-sm">
           &copy; 2025 Nishant Singh. All rights reserved.
         </p>
       </div>

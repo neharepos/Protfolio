@@ -34,7 +34,7 @@ const blogData = [
 
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-8">
       <Heading 
-      heading="Works" 
+      heading="Work" 
       description="Things I have written recently" 
       class="mb-8"/>
 
