@@ -49,8 +49,7 @@ const extraCount = computed(() => {
         lg:max-w-full
         transition
         duration-300
-        hover:bg-zinc-800
-        bg-zinc-900
+        hover:bg-zinc-900
         backdrop-blur-md
         rounded-2xl
         p-5
@@ -60,11 +59,11 @@ const extraCount = computed(() => {
         border-zinc-800 border-2
       "
     >
-      <h2 class="font-bold text-lg sm:text-xl text-white font-poppins group-hover:text-emerald-400">
+      <h2 class="font-bold text-lg sm:text-xl text-white font-poppins">
         {{ title }}
       </h2>
 
-      <h3 class="text-sm mt-1 text-emerald-500">
+      <h3 class="text-sm mt-1 text-gray-400">
         {{ date }}
       </h3>
 

@@ -31,7 +31,7 @@ const duration = computed(
 <template>
   <div class="px-12 pb-1">
     <div
-      class="relative pl-10 pb-4 pt-4 pr-10 border-2 group mt-2 bg-zinc-900 border-zinc-800 mb-6 cursor-pointer shadow-lg transition duration-300 hover:bg-zinc-800"
+      class="relative pl-10 pb-4 pt-4 pr-10 border-2 group mt-2 border-zinc-800 mb-6 cursor-pointer shadow-lg rounded-2xl transition duration-300 hover:bg-zinc-900"
     >
       <div class="flex flex-col gap-1">
         <div
@@ -39,7 +39,7 @@ const duration = computed(
         >
           <div>
             <h3
-              class="text-2xl font-bold group-hover:text-emerald-400 text-zinc-100 tracking-tight leading-none"
+              class="text-2xl font-bold text-zinc-100 tracking-tight leading-none"
             >
               {{ role }}
             </h3>
