@@ -60,7 +60,7 @@ const duration = computed(
               {{ role }}
             </h3>
             <div class="flex items-center gap-2 mt-2">
-              <span class="text-blue-400 font-medium">{{ company }}</span>
+              <span class="text-blue-400 font-medium font-mono">{{ company }}</span>
               <span class="text-zinc-600">•</span>
               <span class="text-zinc-500 text-sm italic">{{ location }}</span>
             </div>
@@ -73,7 +73,7 @@ const duration = computed(
           </div>
         </div>
 
-        <p class="mt-4 text-zinc-400 leading-relaxed max-w-2xl font-light">
+        <p class="mt-4 text-gray-400 font-quicksand leading-relaxed max-w-2xl">
           {{ description }}
         </p>
 

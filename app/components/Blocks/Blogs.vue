@@ -2,32 +2,34 @@
 import Cards from '../Elements/Cards.vue';
 import Heading from '../Elements/Heading.vue';
 
-const blogData = [
-  {
-    title: "Understanding Vue 3",
-    date: "Published: Jan 2025",
-    description: "A beginner-friendly guide to Vue 3 and Composition API.",
-    tags: ["abc", "gfd", "yui"]
-  },
-  {
-    title: "Tailwind CSS Tips",
-    date: "Published: Feb 2025",
-    description: "Useful Tailwind tricks to build responsive UIs faster.",
-    tags: ["abcg", "gfdg", "yuia"]
-  },
-  {
-    title: "Tailwind CSS Tips",
-    date: "Published: Feb 2025",
-    description: "Useful Tailwind tricks to build responsive UIs faster.",
-    tags: ["abc", "gfd", "yui"]
-  },
-  {
-    title: "Understanding Vue 3",
-    date: "Published: Jan 2025",
-    description: "A beginner-friendly guide to Vue 3 and Composition API.",
-    tags: ["abcg", "gfdg", "yuia"]
-  }
-]
+// const blogData = [
+//   {
+//     title: "Understanding Vue 3",
+//     date: "Published: Jan 2025",
+//     description: "A beginner-friendly guide to Vue 3 and Composition API.",
+//     tags: ["abc", "gfd", "yui"]
+//   },
+//   {
+//     title: "Tailwind CSS Tips",
+//     date: "Published: Feb 2025",
+//     description: "Useful Tailwind tricks to build responsive UIs faster.",
+//     tags: ["abcg", "gfdg", "yuia"]
+//   },
+//   {
+//     title: "Tailwind CSS Tips",
+//     date: "Published: Feb 2025",
+//     description: "Useful Tailwind tricks to build responsive UIs faster.",
+//     tags: ["abc", "gfd", "yui"]
+//   },
+//   {
+//     title: "Understanding Vue 3",
+//     date: "Published: Jan 2025",
+//     description: "A beginner-friendly guide to Vue 3 and Composition API.",
+//     tags: ["abcg", "gfdg", "yuia"]
+//   }
+// ]
+
+const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).all()
 </script>
 
 <template>

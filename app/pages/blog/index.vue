@@ -4,12 +4,28 @@ const allPosts = await queryCollection('blog').order('date', 'DESC').all()
 </script>
 
 <template>
-  <div>
-    <div v-for="post in allPosts" :key="post._id">
-        <h2>
-          <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
-        </h2>
-        <p>{{ post.description }}</p>
+  <div class="bg-[#0a0a0a]">
+    <div class="">
+
+    
+  <div class="container mx-auto px-6 md:px-12 lg:px-30 xl:px-85 py-10">
+  <ElementsHeading
+        heading="Blogs"
+        description="Things I have written recently"
+      />
     </div>
-  </div>
+    <div class="p-4 mt-2 m-4 flex flex-col items-center gap-6">
+  <ElementsCards
+          v-for="blog in allPosts"
+          :key="blog._id"
+          :title="blog.title"
+          :date="blog.date"
+          :description="blog.description"
+          :tags="blog.tags"
+          class="w-full max-w-xl"
+        />
+        </div>
+        </div>
+    </div>
 </template>
+

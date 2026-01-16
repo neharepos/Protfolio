@@ -1,6 +1,6 @@
 ---
 date: 28-12-2025
-title: "Understanding Vue 3"
+title: "Understand Vue 3"
 description: "A beginner-friendly guide to Vue 3 and Composition API."
 tags: ["abc", "gfd", "yui"]
 ---
@@ -15,9 +15,3 @@ $$
 Inline math: $e^{i\pi} + 1 = 0$. This is how it goes.
 
 Inline equations can be shown $\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$ in this way
-
-Block math:
-
-$$
-Output = \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
-$$

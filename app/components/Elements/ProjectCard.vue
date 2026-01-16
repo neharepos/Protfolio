@@ -57,11 +57,11 @@ const tagColors = [
             </div>
 
             <div class="flex items-center gap-2 mt-1 text-sm">
-              <span v-if="role" class="text-gray-400 font-medium">{{
+              <span v-if="role" class="text-gray-400 font-medium font-mono">{{
                 role
               }}</span>
               <span v-if="role" class="text-gray-400">|</span>
-              <span class="text-gray-400 italic">{{ duration || date }}</span>
+              <span class="text-gray-400 italic font-mono">{{ duration || date }}</span>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ const tagColors = [
           </div>
         </div>
 
-        <p class="text-gray-400 font-light leading-relaxed max-w-3xl mt-2">
+        <p class="text-gray-400 font-quicksand leading-relaxed max-w-3xl mt-2">
           {{ description }}
         </p>
 
