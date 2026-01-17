@@ -48,7 +48,7 @@ const tagColors = [
                       : 'bg-gray-400',
                 ]"
               >
-                <!-- Ping animation for working -->
+      
                 <span
                   v-if="status === 'working'"
                   class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"
