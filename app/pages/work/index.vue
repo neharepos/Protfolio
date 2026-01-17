@@ -13,7 +13,7 @@ const allPosts = await queryCollection('work').order('startDate', 'DESC').all()
 
       <div class="p-4 flex flex-col items-center">
       <ElementsWorkCard
-          v-for="work in allPosts"
+          v-for="(work, index) in allPosts"
           :key="index"
           :company="work.company"
           :role="work.role"
