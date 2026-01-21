@@ -88,7 +88,7 @@
           </a>
         </div>
         <p class="text-sm">
-          &copy; 2025 Nishant Singh. All rights reserved.
+          &copy; 2026 Neha Keshri. All rights reserved.
         </p>
       </div>
     </div>

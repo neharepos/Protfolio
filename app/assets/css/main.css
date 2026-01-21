@@ -6,6 +6,7 @@
 @import "tailwindcss";
 
 @theme {
+
   /* Set Inter as the default sans font */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   
@@ -14,4 +15,34 @@
   --font-cursive: "Cedarville Cursive", cursive;
   --font-lato: "Lato", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
+}
+
+@layer components{
+  .content h1{
+    @apply text-3xl font-bold mb-4
+  }
+  .content ul{
+    @apply list-disc px-6
+  }
+
+  .content hr{
+    @apply opacity-10
+  }
+  
+  .content h2 {
+    @apply text-2xl font-semibold font-quicksand mt-4 mb-3;
+  }
+  .content h3{
+    @apply text-lg mt-3 mb-3 ;
+  }
+  .content p {
+    @apply text-base leading-relaxed mb-4;
+  }
+  .content ol {
+    @apply list-decimal pl-6 mb-4 space-y-2;
+  }
+
+  .content a {
+    @apply text-gray-300;
+  }
 }

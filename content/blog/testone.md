@@ -9,3 +9,11 @@ lorm24
 $$
 \int_a^b f(x)\,dx
 $$
+
+_This is italic_
+
+__This is bold__
+
+- animals
+- fruits
+- flowers
