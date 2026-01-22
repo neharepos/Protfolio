@@ -54,8 +54,8 @@ const visibleTags = computed(() => {
         </span>
       </div>
 
-      <div class="max-w-none">
-        <div class="content ">
+      <div>
+        <div class="content max-w-none">
         <ContentRenderer :value="post" />
       </div>
       </div>

@@ -5,13 +5,13 @@ const allPosts = await queryCollection('project').order('duration', 'DESC').all(
 
 <template>
   <div class="bg-[#0a0a0a] min-h-screen">
-    <div class="container mx-auto px-6 md:px-12 lg:px-30 xl:px-85 py-10">
-    <ElementsHeading
-          heading="Projects"
-          description="Things I have written recently"
-          class="mb-8"
-        />
-      </div>
+    <div class="container mx-auto px-6 md:px-12 lg:px-18 max-w-6xl py-5">
+  <ElementsHeading
+    heading="Projects"
+    description="Things I have written recently"
+    class="mb-8"
+  />
+</div>
 
       <div class="flex flex-col items-center">
         <ElementsProjectCard

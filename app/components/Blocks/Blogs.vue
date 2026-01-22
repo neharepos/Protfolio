@@ -33,15 +33,13 @@ const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).al
 </script>
 
 <template>
-  <div class="relative bg-[#0a0a0a] min-h-screen flex justify-center -mt-5" >
-    
+  <div class="relative bg-[#0a0a0a] py-1 md:py-2">
     
     <div
       class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none"
       style="background-image: radial-gradient(#3f3f46 1px, transparent 1px); background-size: 24px 24px;"
     ></div>
 
-    
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-8">
       
       <Heading
@@ -49,27 +47,19 @@ const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).al
         description="Things I have written recently"
       />
 
-      <div
-        class="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-    
-          gap-6
-          mt-8
-        "
-      >
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
         <Cards
           v-for="(blog, index) in blogData"
           :key="index"
-          :title="blog.title"
-          :date="blog.date"
-          :description="blog.description"
-          :tags="blog.tags"
+          v-bind="blog" 
         />
       </div>
 
-      <button class="mt-6 border px-4 mb-4 ml-6 border-gray-600 text-white rounded sm:px- cursor-pointer hover:underline">View all</button>
+      <div class="mt-10 flex justify-start sm:justify-start">
+         <button class="border px-6 ml-5 py-2 border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 rounded-xl transition-all cursor-pointer">
+           View all blogs
+         </button>
+      </div>
 
     </div>
   </div>

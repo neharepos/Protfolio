@@ -7,33 +7,28 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
 </script>
 
 <template>
-  <div class="bg-[#0a0a0a] relative -mt-2 sm:-mt-22 md:-mt-22 lg:-mt-32">
-    <div>
-        <div
+  <div class="relative bg-[#0a0a0a] py-12 md:py-3">
+    
+    <div
       class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none"
       style="background-image: radial-gradient(#3f3f46 1px, transparent 1px); background-size: 24px 24px;"
     ></div>
 
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-8">
       <Heading 
-      heading="Work" 
-      description="Things I have worked upon" 
-      class="mb-8"/>
+        heading="Work" 
+        description="Things I have worked upon" 
+        class="mb-10"
+      />
 
-      <WorkCard
+      <div class="flex flex-col gap-8">
+        <WorkCard
           v-for="(work, index) in workData"
           :key="index"
-          :company="work.company"
-          :role="work.role"
-          :location="work.location"
-          :startDate="work.startDate"
-          :endDate="work.endDate"
-          :description="work.description"
-          :skills="work.skills"
           v-bind="work"
           :isLast="index === workData.length - 1"
         />
-        </div>
+      </div>
     </div>
   </div>
 </template>

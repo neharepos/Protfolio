@@ -11,13 +11,16 @@ const tagColors = [
   "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   "bg-red-500/20 text-red-300 border-red-500/30",
 ];
+
+
+
 </script>
 
 <template>
   <div class="bg-[#0a0a0a] min-h-screen ">
 
     
-  <div class="container mx-auto px-6 md:px-12 lg:px-30 xl:px-85 py-10">
+  <div class="container mx-auto px-6 md:px-12 lg:px-30 xl:px-85 py-5">
   <ElementsHeading
         heading="Blogs"
         description="Things I have written recently"

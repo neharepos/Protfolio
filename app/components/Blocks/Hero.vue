@@ -61,7 +61,7 @@ onUnmounted(() => {
         - Mobile: Transparent/Simple
         - Desktop: Grid Pattern, Border, Rounded-3xl
     -->
-    <div class="bg-[#0a0a0a] relative p-12 w-full md:p-10 md:border md:border-zinc-800 md:bg-[#0a0a0a] md:overflow-hidden group">
+    <div class="bg-[#0a0a0a] relative p-12 w-full md:p-10  md:bg-[#0a0a0a] md:overflow-hidden group">
         
         <!-- Background Grid Pattern (Desktop Only) -->
         <div class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none" 
