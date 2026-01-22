@@ -6,13 +6,13 @@ const allPosts = await queryCollection('work').order('startDate', 'DESC').all()
 <template>
     <div class="bg-[#0a0a0a] min-h-screen ">
       
-        <div class="container mx-auto px-8 md:px-12 lg:px-18 max-w-6xl py-10">
+        <div class="container mx-auto px-8 md:px-12 lg:px-18 max-w-6xl py-15 ">
         <ElementsHeading 
       heading="Work" 
       description="Things I have written recently" />
       </div>
 
-      <div class="p-4 flex flex-col items-center">
+      <div class="p-4 flex flex-col -mt-12 items-center">
       <ElementsWorkCard
           v-for="(work, index) in allPosts"
           :key="index"

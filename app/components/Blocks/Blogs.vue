@@ -55,12 +55,21 @@ const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).al
         />
       </div>
 
-      <div class="mt-10 flex justify-start sm:justify-start">
+      <!-- <div class="mt-10 flex justify-start sm:justify-start">
          <button class="border px-6 ml-5 py-2 border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 rounded-xl transition-all cursor-pointer">
            View all blogs
          </button>
-      </div>
+      </div> -->
 
+      <div class="mt-10 flex justify-start sm:justify-start">
+   <NuxtLink 
+     to="/blog" 
+     class="border px-6 ml-5 py-2 border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 rounded-xl transition-all cursor-pointer inline-block"
+   >
+     View all blogs
+   </NuxtLink>
+</div>
+      
     </div>
   </div>
 </template>

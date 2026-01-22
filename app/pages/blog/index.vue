@@ -20,13 +20,13 @@ const tagColors = [
   <div class="bg-[#0a0a0a] min-h-screen ">
 
     
-  <div class="container mx-auto px-6 md:px-12 lg:px-30 xl:px-85 py-5">
+  <div class="container mx-auto px-2 md:px-12 lg:px-30 xl:px-85 py-15">
   <ElementsHeading
         heading="Blogs"
         description="Things I have written recently"
       />
     </div>
-    <div class="p-4 mt-2 flex flex-col items-center gap-6">
+    <div class="p-4 -mt-10 flex flex-col items-center gap-6">
   <ElementsCards
           v-for="blog in allPosts"
           :key="index"

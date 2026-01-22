@@ -7,7 +7,7 @@
 
 <template>
     <div>
-            <h1 class="text-white text-3xl ml-4 p-2 font-semibold">
+            <h1 class="text-white text-4xl ml-4 p-2 font-semibold">
                 <div class="inline-block group">
                     <a class="p-1 gap-2 cursor-default font-quicksand"> {{heading}}
                         <!-- <span class='p-2 inline-block ml-[2px] w-6 h-6 transition-transform duration-300 group-hover:translate-x-2'>&#8594;</span> -->

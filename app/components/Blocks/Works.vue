@@ -7,7 +7,7 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
 </script>
 
 <template>
-  <div class="relative bg-[#0a0a0a] py-12 md:py-3">
+  <div class="relative -mt-5 bg-[#0a0a0a] py-12 md:py-3">
     
     <div
       class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none"
@@ -29,6 +29,22 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
           :isLast="index === workData.length - 1"
         />
       </div>
+
+      <!-- <div class="mt-10 flex justify-start sm:justify-start">
+         <button class="border px-6 ml-8 py-2 border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 rounded-xl transition-all cursor-pointer">
+           View all works
+         </button>
+      </div> -->
+
+      <div class="mt-10 flex justify-start sm:justify-start">
+   <NuxtLink 
+     to="/work" 
+     class="border px-6 ml-5 py-2 border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 rounded-xl transition-all cursor-pointer inline-block"
+   >
+     View all works
+   </NuxtLink>
+</div>
+
     </div>
   </div>
 </template>
