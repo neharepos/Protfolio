@@ -19,7 +19,13 @@ tags: ["abc", "gfd", "yui"]
 ```python
 print("Hello World")
 ```
+---
 
+```python
+c=3
+v=9
+g=c+v
+```
 
 | Name | Age |
 |------|-----|

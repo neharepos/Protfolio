@@ -13,11 +13,10 @@ export default defineNuxtConfig({
     'katex/dist/katex.min.css',
     './app/assets/css/main.css'
   ],
-  modules: [
-    '@nuxt/content'
-  ],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode'],
   content: {
     build: {
+      
       markdown: {
         // Add remark plugin to parse $...$ and $$...$$ math syntax
         remarkPlugins: {
