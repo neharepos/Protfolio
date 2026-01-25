@@ -1,7 +1,7 @@
 ---
 title: "Shghjgjhfcfcg"
 description: "this is a string."
-Date: "9 Jan 2024"
+Date: "2024-01-07"
 tags: ["abgfc", "gfvvd", "yuin"]
 status: "completed"
 role: "Stygyugyu"
