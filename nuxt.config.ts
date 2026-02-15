@@ -8,16 +8,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/'] // This tells Nitro to start at home and follow all links to content
-    }
-  },
-  routeRules: {
-    // This ensures your content queries are cached and treated as static
-    '/__nuxt_content/**': { prerender: true }
-  },
+  
 
   css: [
     // KaTeX styles (needed to display math correctly)
@@ -27,7 +18,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxtjs/color-mode'],
   content: {
     database: {
-      type: 'sqlite'
+      type: 'sqlite',
+      // This forces it to stay within the bundled application code 
+      // rather than drifting into Vercel's /tmp directory
+      filename: './content.db' 
     },
     build: {
 
@@ -47,3 +41,23 @@ export default defineNuxtConfig({
     }
   }
 })
+function defineNuxtConfig(arg0: {
+  compatibilityDate: string; vite: { plugins: any[]; }; css: string[]; modules: string[]; content: {
+    database: { type: string; }; build: {
+      markdown: {
+        // Add remark plugin to parse $...$ and $$...$$ math syntax
+        remarkPlugins: { 'remark-math': {}; };
+        // rehype plugin to render math to HTML using KaTeX
+        rehypePlugins: {
+          'rehype-katex': {
+            // optional options; output: 'html' is common (default)
+            output: string;
+          };
+        };
+      };
+    };
+  };
+}) {
+  throw new Error("Function not implemented.");
+}
+
