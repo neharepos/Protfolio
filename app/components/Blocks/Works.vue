@@ -26,7 +26,7 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
           v-for="(work, index) in workData"
           :key="work.path || index"
           :to="work.path" 
-          class="group block transition-all hover:translate-x-1"
+          class="group block"
         >
           <WorkCard
             v-bind="work"

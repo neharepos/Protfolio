@@ -136,15 +136,15 @@ onUnmounted(() => {
                         </div>
                         <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
                             <Phone class="w-4 h-4 text-zinc-600 group-hover:text-green-500" />
-                            <span>+91 8809501856</span>
+                            <a href="https://wa.me/+918809501856" target="_blank"><span>+91 8809501856</span></a>
                         </div>
                         <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
                             <Mail class="w-4 h-4 text-zinc-600 group-hover:text-yellow-500" />
-                            <a href="mailto:nehakeshri12c@gmail.com"><span>nehakeshri12c@gmail.com</span></a>
+                            <a href="mailto:nehakeshrimail@gmail.com"><span>nehakeshrimail@gmail.com</span></a>
                         </div>
                         <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
                             <Globe class="w-4 h-4 text-zinc-600 group-hover:text-blue-500" />
-                            <a href="https://neha.in"><span>neha.in</span></a>
+                            <a href="https://nehakeshri.in"><span>nehakeshri.in</span></a>
                         </div>
                         <div class="flex items-center gap-3">
                             <Mars class="w-4 h-4 text-zinc-600" />
@@ -190,25 +190,25 @@ onUnmounted(() => {
                         </div>
                     </div>
 
-                    <a href="tel:+917209879211" class="flex items-center gap-4 group">
+                    <a href="https://wa.me/+918809501856" target="_blank" class="flex items-center gap-4 group">
                         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Phone class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm text-zinc-200">+91 8809501856</div>
                     </a>
 
-                    <a href="mailto:nehakeshri12c@gmail.com" class="flex items-center gap-4 group">
+                    <a href="mailto:nehakeshrimail@gmail.com" class="flex items-center gap-4 group">
                         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Mail class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">nehakeshri12c@gmail.com</div>
+                        <div class="font-mono text-sm text-zinc-200">nehakeshrimail@gmail.com</div>
                     </a>
 
-                    <a href="https://neha.in" class="flex items-center gap-4 group">
+                    <a href="https://nehakeshri.in" class="flex items-center gap-4 group">
                         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Globe class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">https://neha.in</div>
+                        <div class="font-mono text-sm text-zinc-200">https://nehakeshri.in</div>
                     </a>
                 </div>
                 <!-- End Mobile View -->
