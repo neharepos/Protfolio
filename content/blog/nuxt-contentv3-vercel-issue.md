@@ -30,7 +30,7 @@ Vercel's build environment compiles the binary just fine during the build step. 
 
 My `package.json` had `better-sqlite3` listed as a direct dependency:
 
-```json
+```json [package.json]
 "dependencies": {
   "@nuxt/content": "^3.11.2",
   "better-sqlite3": "^12.6.2",
@@ -57,7 +57,7 @@ Vercel then serves these files straight from its CDN — no serverless function,
 
 ### Step 1: Remove `better-sqlite3` from your dependencies
 
-```json
+```json [package.json]
 "dependencies": {
   "@nuxt/content": "^3.11.2",
   "nuxt": "^4.3.1",
@@ -72,13 +72,13 @@ Run `npm install` to update your lockfile after this change.
 
 In your Vercel project settings, set the build command to:
 
-```
+```bash
 npm run generate
 ```
 
 And set the output directory to:
 
-```
+```bash
 .output/public
 ```
 
@@ -86,7 +86,7 @@ And set the output directory to:
 
 You can also make the static target explicit in your config:
 
-```ts
+```ts [nuxt.config.ts]
 export default defineNuxtConfig({
   nitro: {
     preset: 'static'

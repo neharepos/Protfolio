@@ -102,7 +102,7 @@ onUnmounted(() => {
                     </div>
                     
                     <p class="text-lg text-zinc-400 font-medium font-mono">
-                        Open Source Contributor
+                        Full-stack Developer
                     </p>
                 </div>
 
@@ -113,11 +113,11 @@ onUnmounted(() => {
                     <div class="space-y-3 mb-4 font-mono">
                         <div class="flex items-center gap-3 text-zinc-300">
                             <Code2 class="w-5 h-5 text-zinc-500" />
-                            <span>Full-stack Developer<span class="text-zinc-500"><a href="https://codestam.com">@Codestam-Technologies</a></span></span>
+                            <span>Full-stack Developer<span class="text-zinc-500"><a href="https://codestam.com" target="_blank">@Codestam-Technologies</a></span></span>
                         </div>
                         <div class="flex items-center gap-3 text-zinc-300">
                             <Lightbulb class="w-5 h-5 text-zinc-500" />
-                            <span>Making creative designs</span>
+                            <span>Building Scalable Web Apps for Growing Businesses</span>
                         </div>
                     </div>
 
@@ -142,8 +142,8 @@ onUnmounted(() => {
                             <Globe class="w-4 h-4 text-zinc-600 group-hover:text-blue-500" />
                             <a href="https://nehakeshri.in"><span>nehakeshri.in</span></a>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <Mars class="w-4 h-4 text-zinc-600" />
+                        <div class="flex items-center gap-3 group">
+                            <Mars class="w-4 h-4 text-zinc-600 group-hover:text-[#E0115F]" />
                             <span>she/her</span>
                         </div>
                     </div>
@@ -154,8 +154,8 @@ onUnmounted(() => {
                     
                     <!-- Bio Text -->
                     <div class="font-mono text-sm text-zinc-400 leading-relaxed border-l-2 border-zinc-700 pl-3 mb-2">
-                        <p>Web Development</p>
-                        <p>Making creative designs</p>
+                        <p>Creative Developer</p>
+                        <p>Building Scalable Web Apps for Growing Businesses</p>
                     </div>
 
                     <!-- List Items with Boxed Icons -->
@@ -164,8 +164,8 @@ onUnmounted(() => {
                             <Code2 class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm">
-                            <div class="text-zinc-200 font-bold">Web Developer</div>
-                            <div class="text-zinc-500">@Company</div>
+                            <div class="text-zinc-200 font-bold">Full-stack Developer</div>
+                            <div class="text-zinc-500"><a href="https://codestam.com" target="_blank">@Codestam-Technologies</a></div>
                         </div>
                     </div>
 

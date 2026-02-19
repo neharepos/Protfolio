@@ -23,8 +23,6 @@ const getTagColor = (index) => {
   return tagColors[index % tagColors.length];
 };
 
-const cardRef = ref(null);
-
 const visibleTags = computed(() => {
   return props.tags.slice(0, 2);
 });
@@ -42,6 +40,16 @@ const show_desc = computed(() => {
 const extraCount = computed(() => {
   return Math.max(props.tags.length - 2, 0);
 });
+
+// Date
+const formattedDate = computed(() => {
+  if (!props.date) return "";
+  return new Date(props.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+});
 </script>
 
 <template>
@@ -54,7 +62,7 @@ const extraCount = computed(() => {
       </h2>
 
       <h3 class="text-sm font-mono mt-1 text-gray-400">
-        {{ date }}
+        {{ formattedDate }}
       </h3>
 
       <p class="text-gray-400 mt-3 font-quicksand">

@@ -1,11 +1,27 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
+
 const route = useRoute();
-const slug = useRoute().params.slug;
+const slug = route.params.slug;
+
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("blog").path(`/blog/${slug}`).first();
 });
 
+// 404 if post not found
+if (!post.value) {
+  throw createError({ statusCode: 404, statusMessage: "Post not found" });
+}
+
+// SEO
+useSeoMeta({
+  title: post.value.title,
+  description: post.value.description,
+  ogTitle: post.value.title,
+  ogDescription: post.value.description,
+});
+
+// ─── Tag Colors ──────────────────────────────────────────────────────────────
 const tagColors = [
   "bg-blue-500/20 text-blue-300 border-blue-500/30",
   "bg-green-500/20 text-green-300 border-green-500/30",
@@ -15,14 +31,64 @@ const tagColors = [
   "bg-red-500/20 text-red-300 border-red-500/30",
 ];
 
-const getTagColor = (index) => {
-  return tagColors[index % tagColors.length];
-};
-const tags_len = computed(()=>{
-  post.value.tags
-})
-const visibleTags = computed(() => {
-  return post.value?.tags?.slice(0, tags_len.value) || [];
+const getTagColor = (index) => tagColors[index % tagColors.length];
+
+// Fix: tags_len was broken before — just use all tags directly
+const visibleTags = computed(() => post.value?.tags || []);
+
+// ─── Date Formatting ─────────────────────────────────────────────────────────
+const formattedDate = computed(() => {
+  if (!post.value?.date) return "";
+  return new Date(post.value.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+});
+
+// ─── Copy Button ─────────────────────────────────────────────────────────────
+onMounted(() => {
+  const codeBlocks = document.querySelectorAll(".content pre");
+
+  codeBlocks.forEach((pre) => {
+    // Make pre relatively positioned if not already
+    pre.style.position = "relative";
+
+    const button = document.createElement("button");
+    button.className = "copy-btn";
+    button.setAttribute("aria-label", "Copy code");
+    button.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+      </svg>
+    `;
+
+    button.addEventListener("click", async () => {
+      const code = pre.querySelector("code")?.innerText ?? "";
+      await navigator.clipboard.writeText(code);
+
+      // Swap to checkmark on success
+      button.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      `;
+      button.classList.add("copied");
+
+      setTimeout(() => {
+        button.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          </svg>
+        `;
+        button.classList.remove("copied");
+      }, 2000);
+    });
+
+    pre.appendChild(button);
+  });
 });
 </script>
 
@@ -38,12 +104,12 @@ const visibleTags = computed(() => {
 
       <ElementsPic class="mx-auto" />
 
-      <p class="text-gray-500 mt-5 font-quicksand text-lg">
+      <p class="text-gray-500 mt-5 font-poppins text-lg">
         {{ post.description }}
       </p>
 
       <div class="text-gray-600 mb-4 text-sm font-mono">
-        {{ (post.date) }}
+        {{ formattedDate }}
       </div>
 
       <div class="flex flex-wrap gap-2 mt-4 mb-5 font-mono">
@@ -56,12 +122,44 @@ const visibleTags = computed(() => {
         </span>
       </div>
 
-      <div>
-        <div class="content max-w-none">
+      <div class="content max-w-none">
         <ContentRenderer :value="post" />
       </div>
-      </div>
-      
     </article>
   </div>
 </template>
+
+<style scoped>
+/* Copy button — scoped here so it doesn't leak globally */
+:deep(.copy-btn) {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.05);
+  color: #9ca3af;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+:deep(pre:hover .copy-btn) {
+  opacity: 1;
+}
+
+:deep(.copy-btn:hover) {
+  background: rgb(255 255 255 / 0.1);
+  color: #e5e7eb;
+}
+
+:deep(.copy-btn.copied) {
+  color: #86efac; /* green-300 */
+  border-color: rgb(134 239 172 / 0.3);
+  opacity: 1;
+}
+</style>

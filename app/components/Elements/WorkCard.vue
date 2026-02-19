@@ -27,9 +27,20 @@ const getTagColor = (index) => {
   return tagColors[index % tagColors.length];
 };
 
+const formatDate = (date) => {
+  if (!date) return "Present";
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
+
 const duration = computed(
-  () => `${props.startDate} — ${props.endDate || "Present"}`
+  () => `${formatDate(props.startDate)} — ${formatDate(props.endDate)}`
 );
+
+
 </script>
 
 <template>
