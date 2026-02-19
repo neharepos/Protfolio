@@ -5,15 +5,15 @@
     <div class="text-gray-600 py-8">
       <div class="container mx-auto px-6 flex flex-col items-center">
         <ul class="flex flex-wrap justify-center space-x-6 mb-6">
-          <li><a href="#" class="hover:text-gray-500">Home</a></li>
-          <li><a href="#" class="hover:text-gray-500">Blog</a></li>
-          <li><a href="#" class="hover:text-gray-500">Works</a></li>
-          <li><a href="#" class="hover:text-gray-500">Projects</a></li>
-          <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+          <li><NuxtLink to="/" class="hover:text-gray-500">Home</NuxtLink></li>
+          <li><NuxtLink to="/blog" class="hover:text-gray-500">Blog</NuxtLink></li>
+          <li><NuxtLink to="/work" class="hover:text-gray-500">Work</NuxtLink></li>
+          <li><NuxtLink to="/project" class="hover:text-gray-500">Project</NuxtLink></li>
+          <!-- <li><NuxtLink to="" class="hover:text-gray-500" />Contact</a></li> -->
         </ul>
 
         <div class="gap-6 text-2xl mb-4 flex ">
-          <a href="#">
+          <!-- <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -30,8 +30,8 @@
                 d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
               />
             </svg>
-          </a>
-          <a href="#">
+          </a> -->
+          <!-- <a href="https://instagram.com/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -48,8 +48,8 @@
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
             </svg>
-          </a>
-          <a href="#">
+          </a> -->
+          <a href="https://x.com/vanicodes" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -67,7 +67,7 @@
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="https://github.com/Neharepos" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
