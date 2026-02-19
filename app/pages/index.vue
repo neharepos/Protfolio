@@ -3,7 +3,7 @@
     <BlocksHero />
     <BlocksBlogs />
     <BlocksWorks />
-    <BlocksProjects />
+    <!-- <BlocksProjects /> -->
     <ElementsForm />
     <ElementsFooter />
   </div>
